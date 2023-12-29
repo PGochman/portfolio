@@ -1,0 +1,35 @@
+---
+import { getI18N } from "../i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<header
+  class="flex flex-col sm:flex-row justify-between p-2 text-base md:py-4 md:px-4 lg:px-8 items-center"
+>
+  <h1><strong>Pedro Gochman</strong></h1>
+
+  <nav
+    class="flex-wrap text-sm w-full sm:text-base flex justify-around sm:w-3/5 px-5 sm:min-w-[485px] py-3"
+  >
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#top">{i18n.HOME}</a>
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#projects">{i18n.PROJECTS}</a>
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#experience">{i18n.EXPERIENCE}</a>
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#skills">{i18n.SKILLS}</a>
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#about">{i18n.ABOUT}</a>
+    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#contact">{i18n.CONTACT}</a>
+  </nav>
+
+  <a href={`/${i18n.TRANSLATE_ROUTE}`}>
+    {i18n.TRANSLATE}
+  </a>
+</header>
+
+<style>
+  a {
+    margin: 0;
+    height: fit-content;
+    width: auto;
+  }
+</style>

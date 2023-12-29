@@ -1,0 +1,27 @@
+---
+ import { getI18N } from "@/i18n";
+
+ const {currentLocale} = Astro
+ const i18n = getI18N({currentLocale})
+
+ import Badge from "@/components/Badge.astro"
+---
+
+<section class="w-full sm:w-3/5 mx-4 px-0 sm:mx-[20%] flex py-28 items-center">
+    <div class=" items-center sm:items-start flex flex-col min-w-[220px] sm:max-w-[220px] lg:min-w-[350px]">
+        <div class="flex">
+            <img class="lg:size-24 size-16 rounded-full" src="@/../Foto de perfil.jpeg" />
+            <div class="flex flex-col items-center justify-center">
+                <p class="lg:text-3xl text-xl text-center flex flex-row">{i18n.INTRO_TITLE}</p>
+                <a href="https://www.linkedin.com/in/pedro-gochman/"><Badge class="text-xs lg:text-sm">{i18n.INTRO_WORK}</Badge></a>
+            </div>
+        </div>
+    
+        <div class="flex flex-col items-center sm:items-start text-balance sm:text-wrap ">
+            <h2 class="lg:text-xl text-sm"><strong>Desarrollador Full Stack</strong></h2>
+            <p class="lg:text-lg text-sm" >De Buenos Aires, Argentina</p>
+            <p class="text-sm lg:text-base text-center sm:text-start ">Aprendiendo constantemente, y en busca de mi primera experiencia laboral. Enfocado principalmente en la resolucion de problemas</p>
+        </div>
+    </div>
+    <img class="w-80 sm:flex hidden" src="@/../imagen landing-PhotoRoom.png-PhotoRoom.png" />
+</section>
