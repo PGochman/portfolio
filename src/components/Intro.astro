@@ -1,14 +1,19 @@
 ---
- import { getI18N } from "@/i18n";
+import { getI18N } from "@/i18n";
 
- const {currentLocale} = Astro
- const i18n = getI18N({currentLocale})
+const {currentLocale} = Astro
+const i18n = getI18N({currentLocale})
 
- import Badge from "@/components/Badge.astro"
+import Badge from "@/components/Badge.astro"
+import SocialBadge from "@/components/SocialBadge.astro"
+import LinkedinIcon from "@/icons/LinkedinIcon.astro";
+import GithubIcon from "@/icons/GithubIcon.astro";
+import MailIcon from "@/icons/MailIcon.astro"
+import SectionContainer from "./SectionContainer.astro";
 ---
 
-<section class="w-full sm:w-3/5 mx-4 px-0 sm:mx-[20%] flex py-28 items-center">
-    <div class=" items-center sm:items-start flex flex-col min-w-[220px] sm:max-w-[220px] lg:min-w-[350px]">
+<SectionContainer>
+    <div class="items-center sm:items-start p-0 m-0 flex flex-col min-w-[220px] sm:max-w-[220px] lg:min-w-[350px] sm:justify-evenly">
         <div class="flex">
             <img class="lg:size-24 size-16 rounded-full" src="@/../Foto de perfil.jpeg" />
             <div class="flex flex-col items-center justify-center">
@@ -18,10 +23,17 @@
         </div>
     
         <div class="flex flex-col items-center sm:items-start text-balance sm:text-wrap ">
-            <h2 class="lg:text-xl text-sm"><strong>Desarrollador Full Stack</strong></h2>
-            <p class="lg:text-lg text-sm" >De Buenos Aires, Argentina</p>
-            <p class="text-sm lg:text-base text-center sm:text-start ">Aprendiendo constantemente, y en busca de mi primera experiencia laboral. Enfocado principalmente en la resolucion de problemas</p>
+            <h2 class="lg:text-xl text-sm"><strong>{i18n.INTRO_1}</strong></h2>
+            <p class="lg:text-lg text-sm" >{i18n.INTRO_2}</p>
+            <p class="text-sm lg:text-base text-center sm:text-start ">{i18n.INTRO_3}</p>
         </div>
+    
+        <nav class="flex flex-wrap justify-center">
+            <SocialBadge href="https://www.linkedin.com/in/pedro-gochman/"><LinkedinIcon class="size-4"/>LinkedIn</SocialBadge>
+            <SocialBadge href="https://github.com/PGochman"><GithubIcon class="size-4"/>GitHub</SocialBadge>
+            <SocialBadge > <MailIcon/> pedrogoch55@gmail.com</SocialBadge>
+        </nav> 
     </div>
+        
     <img class="w-80 sm:flex hidden" src="@/../imagen landing-PhotoRoom.png-PhotoRoom.png" />
-</section>
+</SectionContainer>
