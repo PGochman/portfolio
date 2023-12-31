@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+type Experience = {
+    date: string,
+    title: string,
+    description: string
+}
+const EXPERIENCE : Experience[] = []
+
+const {currentLocale} = Astro
+import { getI18N } from "@/i18n";
+const i18n = getI18N({currentLocale})
+---
+
+<div class="flex flex-col flex-wrap justify-center sm:min-w-[540px]  my-6 ">
+    <h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2">{i18n.EXPERIENCE}</h1>
+    {EXPERIENCE.length ? (
+        <ol class="relative border-s border-my-green-20 text-pretty">  
+            {EXPERIENCE.map(({date, title, description}, index) => {
+                return (
+                    <li class={`${index!==EXPERIENCE.length -1 ? "mb-10" : ""} ms-4`}>
+                        <ExperienceItem date={date} title={title} description={description} /> 
+                    </li>
+                ) 
+            })}                
+        </ol>
+    ) : (
+        <p class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2">{i18n.NO_EXPERIENCE}</p>
+    )}
+
+</div>    
+

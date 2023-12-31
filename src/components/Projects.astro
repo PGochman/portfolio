@@ -1,0 +1,35 @@
+---
+const {currentLocale} = Astro
+import { getI18N } from "@/i18n"
+const i18n = getI18N({currentLocale})
+import {html, css, javascript, node, next, express, postgre, react, astro, tailwind, mercadoPago, firebase} from "@/data/techs"
+import Project from "./Project.astro"
+
+
+const PROJECTS = [
+    {
+        name: "ConnectInk",
+        description: i18n.CONNECTINK_DESCRIPTION,
+        date: "Nov 2023 - Dic 2023",
+        techs: [javascript, next, css, tailwind, node, express, postgre, mercadoPago, firebase],
+        repository: "https://github.com/santicasalis/ConnectInk",
+        deploy: "https://connectink.vercel.app/"
+    },
+    {
+        name: i18n.COUNTRIES_NAME,
+        description: i18n.COUNTRIES_DESCRIPTION,
+        date: "Oct 2023 - Nov 2023",
+        techs: [javascript, react, css, node, express, postgre],
+        repository: "https://github.com/PGochman/cr-pi-countries-main"
+    }
+]
+---
+<div class="flex flex-col flex-wrap justify-center flex flex-wrap sm:min-w-[540px] ">
+    <h1 class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2">{i18n.PROJECTS}</h1>
+        {PROJECTS.map(({name, description, date, techs, repository, deploy}) => {
+            return <div class="flex flex-col items-center sm:items-start text-balance sm:text-wrap w-full my-6">
+                <Project name={name} description={description} date={date} techs={techs} repository={repository} deploy={deploy} />
+            </div>
+        })}
+    </div>
+</div>

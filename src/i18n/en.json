@@ -7,9 +7,16 @@
     "CONTACT": "Contact",
     "TRANSLATE": "Translate to spanish",
     "TRANSLATE_ROUTE": "",
-    "INTRO_TITLE": "Hi, I'm Pedro",
+    "INTRO_TITLE": "Hi👋, I'm Pedro",
     "INTRO_WORK": "Available for work",
     "INTRO_1": "Full stack developer",
     "INTRO_2": "From Buenos Aires, Argentina",
-    "INTRO_3": "Constantly learning, and looking for my first work experience. Mainly focused on problem solving"
+    "INTRO_3": "Constantly learning, and looking for my first work experience. Mainly focused on problem solving",
+    "CONNECTINK_DESCRIPTION": "Educational project. An app developed as the final project of the Soy Henry bootcamp. Its main function is to connect tattoo artists with clients, allowing clients to book appointments with the tattoo artists. As an additional feature, it includes a social media section where tattoo artists can make posts and interact with other artists and clients.",
+    "COUNTRIES_NAME": "Country information App",
+    "COUNTRIES_DESCRIPTION": "Educational project. An application that has a database with information from 250 countries. Users can search by name, continent, and subcontinent, as well as sort by name or population. Additionally, countries are associated with various activities. These activities can be created, edited, or deleted.",
+    "NO_EXPERIENCE": "Still looking for my first profesional experiece",
+    "PROJECT_REPOSITORY": "View repository",
+    "PROJECT_DEPLOY": "View page",
+    "PROJECT_LINK": "Links"
 }

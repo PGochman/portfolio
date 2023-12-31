@@ -6,7 +6,7 @@ const i18n = getI18N({ currentLocale });
 ---
 
 <header
-  class="flex flex-col sm:flex-row justify-between sm:p-2 text-base md:py-4 md:px-4 lg:px-8 items-center"
+  class="flex flex-col sm:flex-row justify-between sm:p-2 text-base md:py-2 md:px-4 lg:px-8 items-center sticky top-0 bg-my-green-8 z-10"
 >
   <h1><strong>Pedro Gochman</strong></h1>
 
@@ -31,10 +31,11 @@ const i18n = getI18N({ currentLocale });
     margin: 0;
     height: fit-content;
     width: auto;
+    border-radius: 10%;
   }
 
   a:hover{
-    font-weight: bold;
-    font-size: large;
+    background-color: #87B979;
+    transition: all ease-in-out 0.2s;
   }
 </style>

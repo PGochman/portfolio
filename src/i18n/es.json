@@ -11,5 +11,12 @@
     "INTRO_WORK": "Disponible para trabajar",
     "INTRO_1": "Desarrollador Full Stack",
     "INTRO_2": "De Buenos Aires, Argentina",
-    "INTRO_3": "Aprendiendo constantemente, y en busca de mi primera experiencia laboral. Enfocado principalmente en la resolucion de problemas"
+    "INTRO_3": "Aprendiendo constantemente, y en busca de mi primera experiencia laboral. Enfocado principalmente en la resolucion de problemas",
+    "CONNECTINK_DESCRIPTION": "Proyecto de caracter educativo. App realizada como proyecto final del bootcamp Soy Henry. Como principal función, conecta tatuadores con clientes, perimitiendo a los clientes reservar turnos con los tatuadores. Como funcionalidad adicional, tiene un apartado de red social donde los tatuadores hacen publicaciones e interactúan con los demás tatuadores y con los clientes",
+    "COUNTRIES_NAME": "App de información de países",
+    "COUNTRIES_DESCRIPTION": "Proyecto de caracter educativo. Aplicación que tiene como base de datos la informacion de 250 países. Se pueden buscar por nombre, continente y sub continente, y ordenar por nombre o población. Adicionalmente, los países tienen asociadas distintas actividades. Estas actividades se pueden crear, editar o eliminar.",
+    "NO_EXPERIENCE": "Todavía en busqueda de mi primera experiencia laboral",
+    "PROJECT_REPOSITORY": "Visitar repositorio",
+    "PROJECT_DEPLOY": "Visitar página",
+    "PROJECT_LINK": "Enlaces"
 }

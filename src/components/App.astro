@@ -3,12 +3,28 @@ import Layout from "@/layouts/Layout.astro";
 import "@fontsource/lato";
 import Intro from "./Intro.astro";
 import Skills from "./Skills.astro";
+import SectionContainer from "./SectionContainer.astro";
+import Projects from "./Projects.astro";
+import Experience from "./Experience.astro";
 ---
 
 <Layout title="Pedro Gochman - Web developer" description="Pedro Gochman's portfolio">
   <main>
-	<Intro />
-  <Skills />
+    <SectionContainer>
+      <Intro />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <Skills />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <Experience/>
+    </SectionContainer>
   </main>
 </Layout>
 
