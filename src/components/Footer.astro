@@ -1,0 +1,41 @@
+---
+import LinkedinIcon from "@/icons/LinkedinIcon.astro";
+import GithubIcon from "@/icons/GithubIcon.astro";
+
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+---
+
+<footer class="bg-my-green-10">
+  <div
+    class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-between"
+  >
+    <span class="text-sm sm:text-center"
+      >{i18n.FOOTER}
+    </span>
+    <ul
+      class="flex flex-wrap"
+    >
+      <li>
+        <a href="https://www.linkedin.com/in/pedro-gochman/"
+          ><LinkedinIcon class="size-8 sm:size-10" /></a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/PGochman"> <GithubIcon class="size-8 sm:size-10" /> </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+    li{
+        margin: 2px 4px;
+        height: fit-content;
+    }
+    a{
+        height: fit-content;
+    }
+</style>

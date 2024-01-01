@@ -5,37 +5,96 @@ const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 ---
 
-<header
-  class="flex flex-col sm:flex-row justify-between sm:p-2 text-base md:py-2 md:px-4 lg:px-8 items-center sticky top-0 bg-my-green-8 z-10"
->
-  <h1><strong>Pedro Gochman</strong></h1>
-
-  <nav
-    class="flex-wrap text-sm w-full sm:text-base flex justify-around sm:w-3/5 sm:px-5 sm:min-w-[485px] py-3"
+<nav class="sticky top-0 bg-my-green-8 z-10">
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 px-4"
   >
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#top">{i18n.HOME}</a>
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#projects">{i18n.PROJECTS}</a>
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#experience">{i18n.EXPERIENCE}</a>
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#skills">{i18n.SKILLS}</a>
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#about">{i18n.ABOUT}</a>
-    <a class="px-2 py-1 sm:py-0 sm:px-1" href="#contact">{i18n.CONTACT}</a>
-  </nav>
+    <a href="#top" class="text-lg sm:text-2xl hover:no-underline"><strong>Pedro Gochman</strong></a>
+    <button
+      data-collapse-toggle="navbar-default"
+      type="button"
+      class="inline-flex items-center m-1 w-8 h-8 justify-center text-sm rounded-lg lg:hidden hover:bg-my-green-12 focus:outline-none focus:ring-2 focus:ring-my-green-15"
+      aria-controls="navbar-default"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Open main menu</span>
+      <svg
+        class="size-5 text-black"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 17 14"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 1h15M1 7h15M1 13h15"></path>
+      </svg>
+    </button>
+    <div class="hidden w-full lg:block lg:w-auto transition-all" id="navbar-default">
+      <ul
+        class="font-medium flex flex-col p-2 lg:p-0  rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 bg-my-green-10 lg:bg-transparent "
+      >
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#top">{i18n.HOME}</a>
+        </li>
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#skills">{i18n.SKILLS}</a>
+        </li>
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#projects">{i18n.PROJECTS}</a>
+        </li>
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#experience">{i18n.EXPERIENCE}</a>
+        </li>
+        
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#about">{i18n.ABOUT}</a>
+        </li>
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href="#contact">{i18n.CONTACT}</a>
+        </li>
+        <li>
+          <a class="px-2 py-1 sm:py-0 sm:px-1" href={`/${i18n.TRANSLATE_ROUTE}`}>
+            {i18n.TRANSLATE}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <a href={`/${i18n.TRANSLATE_ROUTE}`}>
-    {i18n.TRANSLATE}
-  </a>
-</header>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navbarToggle = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    var navbarMenu = document.getElementById('navbar-default');
+    var navbarItems = navbarMenu?.querySelectorAll('a'); // Selecciona todos los elementos 'a' dentro del menú
+
+    navbarToggle?.addEventListener('click', function () {
+      navbarMenu?.classList.toggle('hidden');
+    });
+
+    navbarItems?.forEach(function(item) {
+      item.addEventListener('click', function () {
+        navbarMenu?.classList.add('hidden');
+      });
+    });
+  });
+</script>
 
 <style>
   a {
+    display: block;
     margin: 0;
     height: fit-content;
     width: auto;
-    border-radius: 10%;
+    transition: all ease-in-out 0.3s;
   }
 
   a:hover{
-    background-color: #87B979;
-    transition: all ease-in-out 0.2s;
+    text-decoration: underline;
   }
+
 </style>

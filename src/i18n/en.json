@@ -18,5 +18,12 @@
     "NO_EXPERIENCE": "Still looking for my first profesional experiece",
     "PROJECT_REPOSITORY": "View repository",
     "PROJECT_DEPLOY": "View page",
-    "PROJECT_LINK": "Links"
+    "PROJECT_LINK": "Links",
+    "ABOUT_TEXT": "I studied architecture in high school and electronic engineering in college. Throughout the three years of my college education, I developed a strong interest in programming, leading me to decide to focus solely on studying that. For my initial educational experience, I attended a programming bootcamp called Soy Henry, where I learned full-stack web development and various technologies associated with it, such as React, Redux, Next, Tailwind, Express, Sequelize, PostgreSQL, etc. Additionally, during the bootcamp, I completed my first two projects, which reinforced my knowledge and allowed me to explore new territories. Collaborating with a team on these projects taught me valuable lessons about working on a project collectively. Currently, I am seeking my first professional experience while planning to continue my education and self-improvement to become a better programmer every day.",
+    "CONTACT_INFO": "Send me an email at pedrogoch55@gmail.com, or fill de form below to contact me",
+    "FROM_NAME": "Name:",
+    "CONTACT_EMAIL": "Email:",
+    "MESSAGE": "Message:",
+    "CONTACT_BUTTON": "Send Email",
+    "FOOTER": "App developed with Astro by Pedro Gochman"
 }

@@ -18,5 +18,12 @@
     "NO_EXPERIENCE": "Todavía en busqueda de mi primera experiencia laboral",
     "PROJECT_REPOSITORY": "Visitar repositorio",
     "PROJECT_DEPLOY": "Visitar página",
-    "PROJECT_LINK": "Enlaces"
+    "PROJECT_LINK": "Enlaces",
+    "ABOUT_TEXT": "Estudie arquitectura en la secundaria e ingeniería electrónica en la facultad, y durante los tres años de carrera que hice desperté un interés muy grande por la programación, y decidí dedicarme solo a estudiar eso. Como primera experiencia educativa realizé un bootcamp de programación llamado Soy Henry, donde aprendí desarrollo web full stack y diversas tecnologías para realizarlo como React, Redux, Next, Tailwind, Express, Sequelize, PostgreSQL, etc. También durante el bootcamp realicé mis primeros dos proyectos, que reforzaron mis conocimientos y me hicieron adentrarme en nuevos terrenos, y aprender lo que es realizar un proyecto en conjunto con un equipo. Actualmente me encuentro buscando mi primera experiencia profesional, mientras planeo seguir estudiando y formandome para poder ser cada día un mejor programador.",
+    "CONTACT_INFO": "Enviame un mail a pedrogoch55@gmail.com, o llena el siguiente formulario para contactarme",
+    "FROM_NAME": "Nombre:",
+    "CONTACT_EMAIL": "Email:",
+    "MESSAGE": "Mensaje:",
+    "CONTACT_BUTTON": "Enviar Email",
+    "FOOTER": "Aplicacion realizada con Astro por Pedro Gochman"
 }

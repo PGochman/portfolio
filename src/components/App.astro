@@ -6,6 +6,9 @@ import Skills from "./Skills.astro";
 import SectionContainer from "./SectionContainer.astro";
 import Projects from "./Projects.astro";
 import Experience from "./Experience.astro";
+import About from "./About.astro";
+import Contact from "./Contact.astro";
+import Footer from "./Footer.astro";
 ---
 
 <Layout title="Pedro Gochman - Web developer" description="Pedro Gochman's portfolio">
@@ -24,6 +27,14 @@ import Experience from "./Experience.astro";
 
     <SectionContainer id="experience">
       <Experience/>
+    </SectionContainer>
+
+    <SectionContainer id="about">
+      <About />
+    </SectionContainer>
+
+    <SectionContainer id="contact">
+      <Contact />
     </SectionContainer>
   </main>
 </Layout>

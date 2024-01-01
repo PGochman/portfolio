@@ -1,6 +1,6 @@
 ---
 import TechBadge from "./TechBadge.astro";
-const {name, description, date, techs, deploy, repository} = Astro.props
+const {name, description, date, techs, deploy, repository, photo} = Astro.props
 
 const {currentLocale} = Astro
 import { getI18N } from "@/i18n";
@@ -10,9 +10,11 @@ import GithubIcon from "@/icons/GithubIcon.astro";
 import LinkIcon from "@/icons/LinkIcon.astro"
 import WebIcon from "@/icons/WebIcon.astro"
 --- 
-
 <p class="text-base lg:text-xl "><strong>{name}</strong></p>
 <p class="text-[10px] sm:text-xs">{date}</p>
+<div class="mx-2 sm:mx-0">
+  <img src={photo} class="rounded shadow-md shadow-my-green-20 my-2" />
+</div>
 <p class="text-sm lg:text-base text-center sm:text-start ">{description}</p>
 <section class="flex flex-wrap justify-center sm:justify-start">
 {techs.map((tech: any) => {

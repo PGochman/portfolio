@@ -1,0 +1,68 @@
+---
+import { getI18N } from "@/i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+import MailIcon from "@/icons/MailIcon.astro";
+---
+
+<div class="flex flex-col mx-1 mb-32">
+    <h1 class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2">{i18n.CONTACT} <MailIcon class="size-8 lg:size-10" /></h1>
+    <p class="flex text-pretty text-center sm:text-start">{i18n.CONTACT_INFO}</p>
+
+    <form id="form" class="flex flex-col">
+    
+        <label for="from_name">{i18n.FROM_NAME}</label>
+        <input type="text" name="from_name" id="from_name">
+    
+        <label for="contact_email">{i18n.CONTACT_EMAIL}</label>
+        <input type="text" name="contact_email" id="contact_email">
+        
+        <label for="message">{i18n.MESSAGE}</label>
+        <textarea name="message" id="message"/>
+    
+        <button type="submit" id="button">{i18n.CONTACT_BUTTON}</button>
+    </form>
+</div>
+
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+    emailjs.init('hMZzK1xEheknes-zx')
+</script>
+
+<script type="text/javascript">
+    const btn = document.getElementById('button');
+
+    document?.getElementById('form')?.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_wxr3uyd';
+
+    emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+        btn.value = 'Send Email';
+        }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+    });
+    });
+</script>
+
+<style>
+    input, textarea, button{
+        background-color: #65A054;
+        margin: 6px;
+        padding: 2px;
+        border-radius: 4px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+</style>
