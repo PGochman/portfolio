@@ -1,10 +1,12 @@
 ---
-import { getI18N } from "@/i18n/index";
+import { getI18N } from "@/src/i18n/index";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
+
+import ProfileIcon from "@/src/icons/ProfileIcon.astro";
 ---
 <div class="flex flex-col mx-1 ">
-    <h1 class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2">{i18n.ABOUT}</h1>
+    <h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2 items-center"><ProfileIcon class="size-8 lg:size-10" /> {i18n.ABOUT}</h1>
     <p class="flex text-pretty items-center sm:items-start text-center sm:text-start">{i18n.ABOUT_TEXT}</p>
 </div>

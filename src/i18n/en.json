@@ -25,5 +25,8 @@
     "CONTACT_EMAIL": "Email:",
     "MESSAGE": "Message:",
     "CONTACT_BUTTON": "Send Email",
-    "FOOTER": "App developed with Astro by Pedro Gochman"
+    "FOOTER": "App developed with Astro by Pedro Gochman",
+    "RESUME": "Resume",
+    "RESUME_TEXT": "Download resume PDF",
+    "RESUME_DOWNLOAD": "Resume Pedro Gochman"
 }

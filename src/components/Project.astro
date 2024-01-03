@@ -3,12 +3,12 @@ import TechBadge from "./TechBadge.astro";
 const {name, description, date, techs, deploy, repository, photo} = Astro.props
 
 const {currentLocale} = Astro
-import { getI18N } from "@/i18n";
+import { getI18N } from "@/src/i18n";
 const i18n = getI18N({currentLocale})
 
-import GithubIcon from "@/icons/GithubIcon.astro";
-import LinkIcon from "@/icons/LinkIcon.astro"
-import WebIcon from "@/icons/WebIcon.astro"
+import GithubIcon from "@/src/icons/GithubIcon.astro";
+import LinkIcon from "@/src/icons/LinkIcon.astro"
+import WebIcon from "@/src/icons/WebIcon.astro"
 --- 
 <p class="text-base lg:text-xl "><strong>{name}</strong></p>
 <p class="text-[10px] sm:text-xs">{date}</p>

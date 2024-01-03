@@ -8,13 +8,20 @@ type Experience = {
 const EXPERIENCE : Experience[] = []
 
 const {currentLocale} = Astro
-import { getI18N } from "@/i18n";
+import { getI18N } from "@/src/i18n";
 const i18n = getI18N({currentLocale})
+
+import BriefcaseIcon from "@/src/icons/BriefcaseIcon.astro"
+import ToolsIcon from "@/src/icons/ToolsIcon.astro"
+import resume from "@/public/Resume Pedro Gochman English.pdf"
+import cv from "@/public/CV Pedro Gochman Español.pdf"
+import PDFIcon from "@/src/icons/PDFIcon.astro";
+
 ---
 
 <div class="flex flex-col flex-wrap justify-center sm:min-w-[540px]  my-6 ">
-    <h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2">{i18n.EXPERIENCE}</h1>
-    {EXPERIENCE.length ? (
+{EXPERIENCE.length ? (
+    <h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2 items-center"><ToolsIcon class="size-8 lg:size-10"/> {i18n.EXPERIENCE}</h1>
         <ol class="relative border-s border-my-green-20 text-pretty">  
             {EXPERIENCE.map(({date, title, description}, index) => {
                 return (
@@ -24,9 +31,10 @@ const i18n = getI18N({currentLocale})
                 ) 
             })}                
         </ol>
-    ) : (
-        <p class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2 text-center sm:text-start">{i18n.NO_EXPERIENCE}</p>
-    )}
-
+) : (
+    <></>
+)}
+<h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2 items-center"><BriefcaseIcon class="size-8 lg:size-10" />{i18n.RESUME}</h1>
+<a href={currentLocale == "en" ? resume : cv } download={i18n.RESUME_DOWNLOAD} class="sm:mx-[20%] justify-center text-sm sm:text-base flex items-center bg-gradient-to-r from-my-green-8 via-my-green-10 to-my-green-12 sm:w-3/5 hover:from-my-green-10 hover:via-my-green-14 hover:to-my-green-18 focus:outline-none rounded-lg px-5 py-2.5 text-center me-2 mb-2"><PDFIcon class="size-5 sm:size-6" />{i18n.RESUME_TEXT}</a>
 </div>    
 

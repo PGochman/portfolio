@@ -25,5 +25,8 @@
     "CONTACT_EMAIL": "Email:",
     "MESSAGE": "Mensaje:",
     "CONTACT_BUTTON": "Enviar Email",
-    "FOOTER": "Aplicación realizada con Astro por Pedro Gochman"  
+    "FOOTER": "Aplicación realizada con Astro por Pedro Gochman",
+    "RESUME": "Currículum",
+    "RESUME_TEXT": "Descargar currículum en PDF",
+    "RESUME_DOWNLOAD": "CV Pedro Gochman"
 }

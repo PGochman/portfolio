@@ -1,14 +1,14 @@
 ---
-import { getI18N } from "@/i18n/index";
+import { getI18N } from "@/src/i18n/index";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
-import MailIcon from "@/icons/MailIcon.astro";
+import MailIcon from "@/src/icons/MailIcon.astro";
 ---
 
 <div class="flex flex-col mx-1 mb-32">
-    <h1 class="flex justify-center lg:text-3xl text-xl mt-8 sm:mb-2">{i18n.CONTACT} <MailIcon class="size-8 lg:size-10" /></h1>
+    <h1 class="flex justify-center lg:text-3xl text-xl sm:mb-2 items-center"><MailIcon class="size-8 lg:size-10" /> {i18n.CONTACT} </h1>
     <p class="flex text-pretty text-center sm:text-start">{i18n.CONTACT_INFO}</p>
 
     <form id="form" class="flex flex-col">

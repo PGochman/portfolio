@@ -1,15 +1,15 @@
-import AstroIcon from "@/icons/AstroIcon.astro";
-import CSSIcon from "@/icons/CSSIcon.astro";
-import ExpressIcon from "@/icons/ExpressIcon.astro";
-import HTMLIcon from "@/icons/HTMLIcon.astro";
-import JavaScriptIcon from "@/icons/JavaScriptIcon.astro";
-import NextIcon from "@/icons/NextIcon.astro";
-import NodeIcon from "@/icons/NodeIcon.astro";
-import PostgreSQLIcon from "@/icons/PostgreSQLIcon.astro";
-import ReactIcon from "@/icons/ReactIcon.astro";
-import TailwindIcon from "@/icons/TailwindIcon.astro";
-import MercadoPagoIcon from "@/icons/MercadoPagoIcon.astro"
-import FireBaseIcon from "@/icons/FireBaseIcon.astro"
+import AstroIcon from "@/src/icons/AstroIcon.astro";
+import CSSIcon from "@/src/icons/CSSIcon.astro";
+import ExpressIcon from "@/src/icons/ExpressIcon.astro";
+import HTMLIcon from "@/src/icons/HTMLIcon.astro";
+import JavaScriptIcon from "@/src/icons/JavaScriptIcon.astro";
+import NextIcon from "@/src/icons/NextIcon.astro";
+import NodeIcon from "@/src/icons/NodeIcon.astro";
+import PostgreSQLIcon from "@/src/icons/PostgreSQLIcon.astro";
+import ReactIcon from "@/src/icons/ReactIcon.astro";
+import TailwindIcon from "@/src/icons/TailwindIcon.astro";
+import MercadoPagoIcon from "@/src/icons/MercadoPagoIcon.astro"
+import FireBaseIcon from "@/src/icons/FireBaseIcon.astro"
 
 export const html = {
   name: "HTML",

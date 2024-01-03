@@ -1,20 +1,21 @@
 ---
-import { getI18N } from "@/i18n";
+import { getI18N } from "@/src/i18n";
 
 const {currentLocale} = Astro
 const i18n = getI18N({currentLocale})
 
-import Badge from "@/components/Badge.astro"
-import SocialBadge from "@/components/SocialBadge.astro"
-import LinkedinIcon from "@/icons/LinkedinIcon.astro";
-import GithubIcon from "@/icons/GithubIcon.astro";
-import MailIcon from "@/icons/MailIcon.astro"
-import SectionContainer from "./SectionContainer.astro";
+import Badge from "@/src/components/Badge.astro"
+import SocialBadge from "@/src/components/SocialBadge.astro"
+import LinkedinIcon from "@/src/icons/LinkedinIcon.astro";
+import GithubIcon from "@/src/icons/GithubIcon.astro";
+import MailIcon from "@/src/icons/MailIcon.astro"
+import LandingPhoto from "@/public/imagen landing-PhotoRoom.png-PhotoRoom.png"
+import profilePhoto from "@/public/Foto de perfil.jpeg"
 ---
 
 <div class="items-center sm:items-start p-0 m-0 flex flex-col min-w-[220px] sm:max-w-[220px] lg:min-w-[350px] sm:justify-evenly">
     <div class="flex">
-        <img class="lg:size-24 size-16 rounded-full" src="@/../Foto de perfil.jpeg" />
+        <img class="lg:size-24 size-16 rounded-full" src={profilePhoto.src} />
         <div class="flex flex-col items-center justify-center">
             <p class="lg:text-3xl text-xl text-center flex flex-row">{i18n.INTRO_TITLE}</p>
             <a href="https://www.linkedin.com/in/pedro-gochman/"><Badge class="text-xs lg:text-sm">{i18n.INTRO_WORK}</Badge></a>
@@ -34,4 +35,4 @@ import SectionContainer from "./SectionContainer.astro";
     </nav> 
 </div>
     
-<img class="w-80 sm:flex hidden" src="@/../imagen landing-PhotoRoom.png-PhotoRoom.png" />
+<img class="w-80 sm:flex hidden" src={LandingPhoto.src}></img>
